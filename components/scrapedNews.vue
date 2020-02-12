@@ -1,10 +1,10 @@
 <template>
 
-  <section class="slice-one-text-image site-grid" :class="[ {'-no-image -bg-pattern-light': !image, '-first': index === 0}]"  >
+  <section class="slice-one-text-image site-grid" :class="[ {'-no-image -bg-pattern-light': !item.image, '-first': index === 0}]"  >
     <div>
 
-    <div class="teaser-image col" v-if="image">
-      <figure style="background-color: red;" :style="{ 'background-image': 'url(' + image + ')' }">
+    <div class="teaser-image col" v-if="item.image">
+      <figure style="background-color: red;" :style="{ 'background-image': 'url(' + item.image + ')' }">
         <div class="triangel"></div>
       </figure>
     </div>
@@ -29,25 +29,11 @@
 <script>
 
 export default {
-  props: ["item", "index"],
-  data () {
-    return {
-      header: this.item,
-      from: this.item,
-      image: this.item.image
-    }
-  },
-  methods: {
-
-  },
-  computed: {
-
-  },
+  props: ["item", "index"]
 }
 </script>
 
 <style lang="scss">
-
 
 
   .slice-one-text-image {
@@ -168,9 +154,16 @@ export default {
 
       &.-first {
          .col-body {
-          // margin-top: 5vh;
-          // margin-bottom: 5vh;
+          margin-top: 5vh;
+          margin-bottom: 5vh;
         }
+        &.-no-image {
+          .col-body {
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+        }
+
         > div {
           display: block;
         }
