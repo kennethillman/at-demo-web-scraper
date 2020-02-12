@@ -1,8 +1,8 @@
 # Web Scraper
 
-> A Active Talents demo
+> An Active Talents demo
 
-Web scraper is simpel POC using static site generator, scheduled builds and webhooks.
+Web scraper is a simpel POC using a static site generator, scheduled builds and webhooks.
 
 * Nuxt.js
 * Netlify  
@@ -28,4 +28,4 @@ $ npm run generate
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
 
-# at-demo-web-scraper
+
