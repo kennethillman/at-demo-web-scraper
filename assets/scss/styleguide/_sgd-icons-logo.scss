@@ -1,0 +1,33 @@
+
+//
+// SGD - ICONS
+//
+
+.sgd-s-icons {
+  svg {
+    height: auto;
+    width: 70px;
+    margin:0 22px 22px 0;
+    fill: $grey1;
+  }
+}
+
+
+//
+// SGD - LOGO DISPLAY
+//
+
+  .sgd-s-logo-display {
+    svg {
+      height: auto;
+      width: 140px;
+      margin:0 56px 32px 0;
+      fill: $black;
+      float: left;
+
+      &.-at-logo-color {
+        width: 182px;
+        margin-right: 46px;
+      }
+    }
+  }

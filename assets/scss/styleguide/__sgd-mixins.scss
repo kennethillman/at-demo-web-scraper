@@ -1,0 +1,23 @@
+
+//
+// STYLEGUIDE MIXINS
+//
+
+
+// - - - SGD COLORS
+
+@mixin sgdColors($colorHex,$colorName) {
+    &.-#{$colorName} {
+      .body {
+        background-color: $colorHex;
+        //border: 10px solid darken($colorHex,4%);
+        box-sizing: border-box;
+        &:after{
+          content: '#{$colorName}' ;
+        }
+        &:before{
+          content: '#{$colorHex}' ;
+        }  
+      }
+    }
+}

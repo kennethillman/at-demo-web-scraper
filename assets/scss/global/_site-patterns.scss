@@ -1,0 +1,31 @@
+
+//
+// SITE - PATTERNS
+//
+
+body {
+
+  .-bg-pattern-light {
+    background-color: $white;
+    background-image: url('../../patterns/bg-curves-dark.svg');
+    background-size: cover;
+    background-position: center center !important;
+    background-attachment: fixed;
+  }
+
+  .-bg-pattern-dark {
+    background-color: $grey1;
+    background-image: url('../../patterns/bg-curves-light.svg');
+    background-size: cover;
+    background-position: center center !important;
+    background-attachment: fixed;
+  }
+
+}
+
+
+
+
+
+
+

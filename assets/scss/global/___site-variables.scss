@@ -1,0 +1,56 @@
+
+//
+// SITE VARIABLES
+//
+
+
+//  - - - COLORS
+
+$white: #ffffff;
+$black: #000000;
+
+$grey1:	#4d4d4d !default;
+$grey2: #b5b5b5 !default;
+$grey3: #c9c9c9 !default;
+$grey4: #f5f5f5 !default;
+$grey5: #e0e0e0 !default;
+
+
+// - - - BRAND COLORS
+
+$orange: 	#f98620;
+$pink: 		#fc1168;
+$purple: 	#70125f;
+$blue: 		#0093de;
+$darkblue: 	#004d9a;
+
+
+// - - - INTERACTION
+
+$int-pink:        $pink;
+$int-pink-hover:  darken($pink,9%);
+$int-pink-click:  lighten($pink,9%);
+
+$int-blue:          $blue;
+$int-blue-hover:    darken($blue,9%);
+$int-blue-click:    lighten($blue,9%);
+
+
+// - - - CONVERTION
+
+$positiv: #00c963;
+$positiv-hover:  darken($positiv,9%);
+$positiv-click:  lighten($positiv,9%);
+
+$negative: #f81005;
+$negative-hover:  darken($negative,9%);
+$negative-click:  lighten($negative,9%);
+
+
+// - - - FONTS
+
+$font-system: "-apple-system", BlinkMacSystemFont, "Apple Color Emoji", “Segoe UI”, Roboto, “Helvetica Neue”, Helvetica, Arial, sans-serif;
+$font-oswald: "Oswald", sans-serif;
+
+$font-a: $font-oswald; // Headers
+$font-b: $font-system; // Bread

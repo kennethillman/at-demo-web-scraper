@@ -1,0 +1,55 @@
+
+//
+// SITE - GLOBALS
+//
+
+
+// - - - GENERAL
+
+body {
+	margin: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+strong,
+b {
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+}
+
+
+a {
+  color: $pink;
+}
+
+
+
+// - - - SLICE
+
+[class^="slice-"] {
+
+  padding: 48px 0;
+
+  // 768px
+  @media screen and (min-width: 768px)  {
+    padding: 72px 0;
+  }
+
+  // 1280px
+  @media screen and (min-width: 1280px)  {
+    padding: 96px 0;
+  }
+
+}
+
+
+
+
+

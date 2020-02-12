@@ -1,0 +1,56 @@
+
+//
+// SITE - HELPER CLASSES
+//
+
+
+// - - - TYPOGRAPHY
+
+.-text-center {
+  text-align: center;
+}
+
+.-text-left {
+  text-align: left;
+}
+
+.-text-right {
+  text-align: right;
+}
+
+
+// - - - DISPLAY
+
+.-hide-mobile {
+  @media screen and (max-width: 767px)  {
+     display: none!important;
+  }
+}
+
+.-hide-tablet {
+  @media screen and (min-width: 768px) and (max-width: 1024px)  {
+     display: none!important;
+  }
+}
+
+.-hide-desktop {
+  @media screen and (min-width: 768px)  {
+     display: none!important;
+  }
+}
+
+// - - - BACKGROUNDS
+
+.-bg-orange-pink {
+  background: linear-gradient(to right, $orange, $pink);
+}
+
+.-bg-pink-purple {
+  background: linear-gradient(to right, $pink, $purple);
+}
+
+
+
+
+
+

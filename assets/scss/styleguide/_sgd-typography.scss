@@ -1,0 +1,205 @@
+
+//
+// SGD - TYPOGRAPHY
+//
+
+
+.sgd-font {
+  font-family: "-apple-system", BlinkMacSystemFont, "Apple Color Emoji", “Segoe UI”, Roboto, “Helvetica Neue”, Helvetica, Arial, sans-serif;
+}
+
+.sgd-header-tag {
+  font-size: 10px;
+  background: $sgd-grey3;
+  padding: .45rem;
+  color: $sgd-white;
+  border-radius: 4px;
+  line-height: 1;
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: 900;
+  margin-bottom: 24px;
+  &.-large {
+    font-size: 14px;
+  }
+  &.-rek {
+    background: $pink;
+  }
+}
+
+.sgd-header {
+
+  font-size: 36px;
+  font-family: $sgd-font-system;
+  font-weight: 900;
+  color: $sgd-grey1;
+  position: relative;
+  margin: 3rem 0 1.75rem;
+
+  span {
+    font-weight: 300;
+  }
+
+  &.-small {
+    font-size: 24px;
+  }
+
+  &.-sub {
+    font-size: 24px;
+    color: #dedede;
+  }
+
+  &.-type {
+    &:before {
+      font-size: 10px;
+      background: $sgd-grey1;
+      padding: .45rem;
+      color: $sgd-white;
+      border-radius: 4px;
+      position: absolute;
+      bottom: 120%;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+  }
+
+  &.-discrete {
+    opacity: .18;
+  }
+
+  &.-common {
+    &:before {
+      content: "common";
+    }
+  }
+
+   &.-prismic {
+    // text-align: center;
+    // text-transform: uppercase;
+    &:before {
+      // left: 50%;
+      // transform: translateX(-50%);
+      content: "prismic - slice";
+    }
+  }
+
+  &.-global {
+    &:before {
+      content: "global";
+    }
+  }
+
+  &.-component {
+    &:before {
+      content: "component";
+    }
+  }
+
+  &.-module {
+    &:before {
+      content: "module";
+    }
+  }
+
+  &.-block {
+    &:before {
+      content: "block";
+    }
+  }
+
+  &.-section {
+    &:before {
+      content: "section";
+    }
+  }
+
+  &.-page {
+    &:before {
+      content: "page";
+    }
+  }
+
+  &.-pages {
+    &:before {
+      content: "pages";
+    }
+  }
+
+  .-inverted & {
+    color: $sgd-grey4;
+      &.-type {
+      &:before {
+        background: $sgd-grey4;
+        color: $sgd-grey1;
+      }
+    }
+  }
+
+}
+
+  .sgd-s-typography {
+
+      .font {
+        margin-bottom: 32px;
+        strong {
+          color: $pink;
+        }
+        .-pb {
+          padding-bottom: 16px;
+        }
+      }
+
+      .font-name {
+        font-size: 32px;
+        padding-bottom: 8px;
+      }
+
+      .font-glyphs {
+        font-size: 16px;
+
+        &.-italic {
+          font-style: italic;
+        }
+        &.-bold {
+          font-weight: bold;
+        }
+      }
+
+
+     .font-system {
+      font-family: $font-system;
+     }
+
+     .font-oswald {
+      font-family: $font-oswald;
+     }
+
+     @media screen and (min-width: 768px)  {
+        .font {
+          margin-bottom: 40px;
+
+        }
+        .font-name {
+          font-size: 40px;
+          padding-bottom: 12px;
+        }
+        .font-glyphs {
+          font-size: 20px;
+
+        }
+     }
+    @media screen and (min-width: 1280px)  {
+        .font {
+          margin-bottom: 48px;
+        }
+        .font-name {
+          font-size: 48px;
+          padding-bottom: 16px;
+        }
+        .font-glyphs {
+          font-size: 24px;
+
+        }
+     }
+
+  }

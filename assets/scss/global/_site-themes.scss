@@ -1,0 +1,78 @@
+
+//
+// SITE - THEMES
+//
+
+
+
+.-theme-white {
+  background-color: #ffff;
+}
+
+.-theme-light {
+  background-color: #f3f3f3;
+}
+
+.-theme-gray {
+  background-color: #666;
+  color: #fff;
+}
+
+.-theme-dark {
+  background-color: #313131;
+  color: #fff
+}
+
+.-theme-dark,
+.-theme-gray {
+
+ // - - - LINK
+
+  a {
+    color: $blue;
+  }
+
+  // - - - HEADER
+
+  .header-primary {
+
+    .anchor {
+      background: $blue;
+    }
+
+    .header {
+      color: $orange;
+    }
+
+    .label {
+      background: $orange;
+    }
+  }
+
+
+ // - - - BUTTON
+
+  .btn {
+    color: $white;
+    border: 4px solid $blue;
+    &:before {
+      background: $blue;
+    }
+    &:hover {
+      color: $blue;
+    }
+    &.-ghost {
+      color: $white;
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+
+
+
+}
+
+
+
+

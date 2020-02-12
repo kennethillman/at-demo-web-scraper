@@ -1,0 +1,59 @@
+
+//
+// SGD - GLOBALS
+//
+
+// - - SGD SECTIONS -> "sgd-s"
+
+  [class^="sgd-s-"] {
+    padding: 128px 0 ;
+    &.-light {
+      background-color: $sgd-light;
+    }
+    &.-off-white {
+      background-color: $sgd-off-white;
+    }
+    &.-inverted {
+      background-color: $sgd-black;
+      color: $sgd-grey4;
+    }
+    &.-grey {
+      background-color: $sgd-grey4;
+    }
+  }
+
+
+  // - - - EDIT BUTTON - PRISMIC
+
+  .wio-link {
+    position: fixed;
+    z-index: 10;
+    right: 40px;
+    bottom: 40px;
+  }
+
+
+  // - - - MENU
+
+  .menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 24px;
+    z-index: 20;
+  }
+
+
+  // - - - BUTTON
+
+  .btn-temp {
+    color: $white;
+    background: $black;
+    padding: 8px 12px;
+    border-radius: 99px;
+    font-size: 14px;
+    line-height: 1;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 0 0 6px
+  }

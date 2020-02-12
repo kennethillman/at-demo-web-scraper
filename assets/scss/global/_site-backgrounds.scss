@@ -1,0 +1,17 @@
+
+// GLOBAL BACKGROUNDS
+
+.-bg-stripe-pink{
+    background: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      $pink 1px,
+      transparent 2px,
+      transparent 4px
+    );
+}
+
+.-bg-solid-pink,
+.-bg-pink {
+    background-color: $pink; 
+}

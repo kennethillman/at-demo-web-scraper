@@ -1,0 +1,258 @@
+
+//
+// GRID - MIXIN
+//
+
+// - - - GRID VARIABLES
+
+$prefix: site !default;
+$prefixColumn: null !default;
+$contentWidth: 100% !default;
+$columns: 12 !default;
+$gutter: 32 !default;
+$min-width: 320px !default;
+$max-width: 1130px !default;
+
+// - - - GRID COLUMN MIXIN
+
+@mixin grid-cols($col: $columns, $name: g) {
+
+  $columnprefix: $name;
+
+  @for $i from 1 through $columns {
+
+      @if $i==12 {
+
+          $combo: $i;
+          $comboStart: 1;
+
+          @for $p from $comboStart through $combo {
+              .#{$columnprefix}-#{$p}     {width: ($p / $combo) * 100%;}
+          }
+
+      }
+
+      @if $i==12 {
+
+          $combo: $i;
+          $comboStart: 1;
+
+          @for $p from $comboStart through $combo {
+              .gc .#{$columnprefix}-push-#{$p}     {margin-left: ($p / $combo) * 100%;}
+          }
+
+          @for $p from $comboStart through $combo {
+              .gc .#{$columnprefix}-pull-#{$p}     {margin-right: ($p / $combo) * 100%;}
+          }
+
+      }
+
+  } // @for END
+
+  .#{$columnprefix}-push-0 {margin-left: 0}
+  .#{$columnprefix}-pull-0 {margin-right: 0}
+
+}
+
+
+// - - - GRID MIXIN
+
+@mixin grid($prefix, $prefixColumn, $contentWidth, $columns, $gutter, $min-width,$max-width,$max-width) {
+
+    @include VP320 {
+
+        .#{$prefix}-grid {
+
+            // - - - GC
+
+            [class^="#{$prefixColumn}g-"] {
+                float: left;
+                @include box-sizing();
+            }
+
+            // - - - GC
+
+            .#{$prefixColumn}gc {
+                @include clearfix;
+                padding: 0 $gutter * 0.5px;
+                min-width: $min-width;
+                max-width: $max-width;
+                margin-left: auto;
+                margin-right: auto;
+                box-sizing: border-box;
+
+                [class^="#{$prefixColumn}g-"] {
+                    padding: 0 $gutter * 0.5px;
+                }
+
+                // - - - GC - MAXIMIZE
+
+                &.-maximize {
+                    width: 100%;
+                    max-width: 100%;
+                    padding: 0;
+
+                    > [class^="#{$prefixColumn}g-"],
+                    > div > [class^="#{$prefixColumn}g-"] {
+                        padding: 0;
+                    }
+
+                    .-full-width {
+                        > [class^="#{$prefixColumn}g-"] {
+                            padding: 0 $gutter * 0.5px;
+                        }
+                    }
+
+                }
+
+                // - - - GC - CENTER
+
+                &.-column-center,
+                &.-g-center {
+                    > [class^="#{$prefixColumn}g-"] {
+                        float: none;
+                        margin-right: auto;
+                        margin-left: auto;
+                        &.#{$prefixColumn}g-1 {
+                            float: left;
+                        }
+                    }
+                }
+
+                // - - - GC - FULL WIDTH
+
+                &.-full-width {
+                    width: 100%;
+                    max-width: 100%;
+                    padding: 0 $gutter * 0.5px;
+                    &.-no-gutter {
+                        padding: 0 $gutter * 1px;
+                    }
+                }
+
+
+                // - - - GC - NO GUTTER
+
+                &.-no-gutter {
+                    padding: 0 $gutter * 0.5px;
+                    margin-left: auto;
+                    margin-right: auto;
+
+                    [class^="#{$prefixColumn}g-"] {
+                        padding: 0;
+                    }
+
+                }
+
+
+            } // .gc END
+
+
+            // - - - COLUMNS
+
+            // Columns > 1/2
+            $oneStart: 1;
+            $oneEnd: 2;
+
+            @for $p from $oneStart through $oneEnd {
+
+                .#{$prefixColumn}g-#{$p} { width: 100%;}
+
+            }
+
+            $twoStart: 3;
+            $twoEnd: 6;
+
+            @for $p from $twoStart through $twoEnd {
+                .#{$prefixColumn}g-#{$p} { width: 100%;}
+            }
+
+            $threeStart: 7;
+            $threeEnd: 12;
+
+
+            @for $p from $threeStart through $threeEnd {
+                .#{$prefixColumn}g-#{$p} { width: 100%;}
+            }
+
+            .#{$prefixColumn}row {
+                @include clearfix;
+            }
+
+        } // -grid END
+
+
+    } // VP320 END
+
+
+
+
+    @include VP600 {
+
+        .#{$prefix}-grid {
+
+            // - - - COLUMNS - MODIFIER
+            .-g-shift-vp600 [class^="#{$prefixColumn}g-"] {
+                float: right;
+            }
+
+            // - - - COLUMNS & PUSH / PULL
+            @for $i from 1 through $columns {
+
+                @if $i == 12 {
+
+                    $combo: $i;
+                    $comboStart: 1;
+
+                    @for $p from $comboStart through $combo {
+                        .#{$prefixColumn}g-#{$p} {width: ($p / $combo) * 100%;}
+                    }
+
+                }
+
+
+                @if $i == 12 {
+
+                    $combo: $i;
+                    $comboStart: 1;
+
+                    @for $p from $comboStart through $combo {
+                        .#{$prefixColumn}g-push-#{$p} {margin-left: ($p / $combo) * 100%;}
+                    }
+
+                    @for $p from $comboStart through $combo {
+                        .#{$prefixColumn}g-pull-#{$p} {margin-right: ($p / $combo) * 100%;}
+                    }
+                }
+            }
+        }
+    } // VP768 END
+
+    @include VP768 {
+
+        .#{$prefix}-grid {
+            .-g-shift-vp768 [class^="#{$prefixColumn}g-"] {
+                float: right;
+            }
+        }
+    }
+
+    @include VP1280 {
+
+        .#{$prefix}-grid {
+            .#{$prefixColumn}gc {
+                margin: 0 auto;
+                padding: 0;
+            }
+        }
+
+    }
+
+    @include MOBILE     { .#{$prefix}-grid { @include grid-cols(12, g-m); } }
+    @include TABLET     { .#{$prefix}-grid { @include grid-cols(12, g-t); } }
+
+
+
+} // MIXIN grid END
+
+

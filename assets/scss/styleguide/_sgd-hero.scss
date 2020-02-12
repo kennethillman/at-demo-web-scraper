@@ -1,0 +1,229 @@
+
+//
+// SGD - HERO
+//
+
+  .sgd-s-hero {
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    // - - - MODIFIERS
+
+    &.-cover {
+      padding: 12vh 0;
+      min-height: 87vh;
+    }
+
+
+    // - - - LOGO
+
+    svg {
+      width: 104px;
+      height: 104px;
+    }
+
+
+    // - - TYPOGRAPHY
+
+    .text {
+      text-align: left;
+      p {
+        font-size: 18px;
+        color: #3a5669;
+        line-height: 1.7;
+        margin-bottom: 1em;
+        &.preamble {
+          font-size: 22px;
+          line-height: 1.56;
+        }
+      }
+
+      strong {
+        &.header {
+          display: block;
+          font-size: 21px;
+          line-height: 1;
+          padding-bottom: .4em;
+          color: $purple;
+          span {
+            font-weight: 300;
+            color: $pink;
+          }
+        }
+      }
+
+      @media screen and (max-width: 767px)  {
+        > div:first-child {
+          margin-bottom: 24px;
+        }
+      }
+
+    }
+
+    .title {
+      font-family: $font-system;
+      display: block;
+      font-weight: 300;
+      font-size: 32px;
+      color: $purple;
+      margin: 8px 0 0;
+      text-transform: uppercase;
+      line-height: 1.1;
+      &.-sub {
+        font-size: 12px;
+        margin: .256em 0 0;
+        color: $pink;
+        font-weight: 400;
+        line-height: 1.4;
+        &.-in-text {
+          margin: 64px 40px;
+        }
+        &.-small {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .title-in-page {
+      font-family: $font-system;
+      display: block;
+      font-weight: 300;
+      font-size: 40px;
+      color: $purple;
+      margin: 0 0 40px;
+      line-height: 1.16;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      text-align: center;
+      &.-qoute{
+        font-weight: 400;
+        font-size: 36px;
+        font-family: $font-oswald;
+        font-style: italic;
+        text-align: center;
+        line-height: 1.256;
+        text-transform: none;
+        letter-spacing: 0;
+        a {
+          font-size: 15px;
+          display: inline-block;
+          margin-top: 1em;
+          text-decoration: none;
+        }
+      }
+    }
+
+
+    // - - - LIST
+
+    ul {
+       padding: 0;
+       margin: 24px 0;
+    }
+
+    li {
+      list-style-type: none;
+      position: relative;
+      padding: 0 12px 12px 0;
+      font-size: 18px;
+
+      .icon {
+        position: absolute;
+        left: 0;
+        top: .18em;
+        fill: $pink;
+        width: 22px;
+        height: 22px;
+        margin-left: -30px;
+      }
+
+      &.-done{
+        .icon {
+          fill: #00c963;
+        }
+      }
+
+      &.-pending{
+        color: #ccc;
+        .icon {
+          fill: #ccc;
+        }
+      }
+
+    }
+
+
+    // - - - FOOTER
+
+    &.-footer {
+      padding: 54px 0;
+      margin-top: 5vh;
+      min-height: unset;
+      background-color: #1a1a1a;
+      svg {
+        fill: #4a4a4a;
+        width: 64px;
+        height: 64px;
+        transition: fill .375s ease-in-out;
+      }
+      .title {
+        color: #4a4a4a;
+        font-size: 22px;
+        transition: color .375s ease-in-out;
+        &.-sub {
+          color: $pink;
+          font-size: 12px;
+          transition: color .375s ease-in-out;
+        }
+      }
+      &:hover {
+        svg {
+          fill: $orange;
+          transition: fill 2.675s ease-in-out;
+        }
+        .title {
+          color: $orange;
+          transition: color 2.675s ease-in-out;
+          &.-sub {
+            color: $blue;
+            transition: color 2.675s ease-in-out;
+          }
+        }
+      }
+    }
+
+
+    // - - - RESPONSIVE
+
+    @media screen and (min-width: 768px)  {
+      svg {
+        width: 160px;
+        height: 160px;
+      }
+      .title {
+        font-size: 48px;
+        letter-spacing: .16em;
+        &.-sub {
+          font-size: 18px;
+        }
+      }
+    }
+
+    @media screen and (min-width: 1280px)  {
+      svg {
+        width: 184px;
+        height: 184px;
+      }
+      .title {
+        font-size: 60px;
+        &.-sub {
+          font-size: 24px;
+          margin: 10px 0 0;
+        }
+      }
+    }
+
+  }

@@ -1,0 +1,24 @@
+
+//
+// SGD - IMAGES
+//
+
+
+.sgd-s-images {
+
+
+  [class^="-photo-"] {
+
+  }
+
+  .-photo-widescreen {
+    @include aspect-ratio-img(16,9);
+  }
+  .-photo-porttrait {
+    @include aspect-ratio-img(3,4);
+  }
+  .-photo-cinemascope {
+    @include aspect-ratio-img(2.35,1);
+  }
+
+}
