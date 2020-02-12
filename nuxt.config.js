@@ -68,9 +68,9 @@ module.exports = {
     // See https://github.com/nuxt-community/axios-module#options
   },
 
-  router: {
-    base: '/demo/'
-  },
+  // router: {
+  //   base: '/demo/'
+  // },
 
   /*
   ** Build configuration
