@@ -9,7 +9,7 @@
         <h2 class="title">Web Scraper</h2>
         <h6 class="title -sub">Demo</h6>
         <h6 class="title -sub -small"><a :href="url" target="_blank">SCRAPED URL</a></h6>
-        <h6 class="title -sub -small"><a :href="url" target="_blank">Github</a></h6>
+        <h6 class="title -sub -small"><a href="https://github.com/kennethillman/at-demo-web-scraper" target="_blank">Github</a></h6>
       </div>
     </div>
 
