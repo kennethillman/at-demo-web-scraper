@@ -7,7 +7,7 @@ body {
 
   .-bg-pattern-light {
     background-color: $white;
-    background-image: url('../../patterns/bg-curves-dark.svg');
+    background-image: url('~assets/patterns/bg-curves-dark.svg');
     background-size: cover;
     background-position: center center !important;
     background-attachment: fixed;
@@ -15,7 +15,7 @@ body {
 
   .-bg-pattern-dark {
     background-color: $grey1;
-    background-image: url('../../patterns/bg-curves-light.svg');
+    background-image: url('~assets/patterns/bg-curves-light.svg');
     background-size: cover;
     background-position: center center !important;
     background-attachment: fixed;
