@@ -2,7 +2,7 @@
 
 An Active Talents Prrof of Concept
 
-This is a POC of the use of a web scraoer with a static site generator, scheduled builds and webhooks.   
+This is a POC of the use of a simpel web scraper working together with a static site generator, scheduled builds triggerd with webhooks from IFTTT (once a day) and github (on push to master branch).   
    
 [DEMO HERE](https://at-demo-web-scraper.netlify.com/)  
    
