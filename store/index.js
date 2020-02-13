@@ -18,8 +18,6 @@ export const mutations = {
 export const actions = {
   async nuxtServerInit ({ commit }, { req }) {
 
-    console.log('nuxtServerInit');
-
     let today = new Date();
     let dd = String(today.getDate()).padStart(2, '0');
 
@@ -28,13 +26,8 @@ export const actions = {
 
     let response = await axios.get(newUrl)
 
-
     let $ = cheerio.load(response.data);
-
     let newsItems = $('.ls-template article');
-
-
-
     let newsList = [];
 
     $('.ls-template article').each(function(index, element){
