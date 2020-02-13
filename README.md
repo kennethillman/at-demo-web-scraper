@@ -1,13 +1,15 @@
 # Web Scraper
 
-> An Active Talents demo
+An Active Talents Prrof of Concept
 
-Web scraper is a simpel POC using a static site generator, scheduled builds and webhooks.
-
-* Nuxt.js
-* Netlify  
-* Easycron
-* Github
+This is a POC of the use of a web scraoer with a static site generator, scheduled builds and webhooks.   
+   
+[DEMO HERE](https://at-demo-web-scraper.netlify.com/)  
+   
+* Nuxt.js (Development)
+* Netlify  (Auto builds)
+* IFTTT (Scheduled webhook)
+* Github (Repo & webhook)
 
 ## Build Setup
 
