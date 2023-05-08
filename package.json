@@ -16,7 +16,7 @@
     "@nuxtjs/svg-sprite": "^0.4.7",
     "cheerio": "^1.0.0-rc.3",
     "cross-env": "^5.2.0",
-    "nuxt": "^2.0.0",
+    "nuxt": "^2.16.3",
     "svg4everybody": "^2.1.9"
   },
   "devDependencies": {
